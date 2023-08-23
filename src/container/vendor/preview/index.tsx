@@ -5,7 +5,7 @@ import {
     CardHeader
 } from './style';
 
-const RestaurantPreview = () => {
+const VendorPreview = () => {
     return (
         <Card>
             <CardHeader>
@@ -27,4 +27,4 @@ const RestaurantPreview = () => {
     );
 };
 
-export default RestaurantPreview;
+export default VendorPreview;

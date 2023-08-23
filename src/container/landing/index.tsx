@@ -1,6 +1,6 @@
 import { Container } from '@uiKits/container';
 import { VStack } from '@uiKits/stack';
-import RestaurantPreview from '@container/restaurant/preview';
+import VendorPreview from '@container/vendor/preview';
 
 const HomeConatiner = () => {
     return (
@@ -11,8 +11,8 @@ const HomeConatiner = () => {
                     gap: '24px'
                 }}
             >
-                <RestaurantPreview />
-                <RestaurantPreview />
+                <VendorPreview />
+                <VendorPreview />
             </VStack>
         </Container>
     );
