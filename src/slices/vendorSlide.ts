@@ -10,11 +10,11 @@ const initialState: any = {
 };
 
 export const vendorSlice = createSlice({
-    name: 'auth',
+    name: 'vendor',
     initialState,
     reducers: {
-        vendorListAction: (state, action: PayloadAction<FinalResult[]>) => {
-            state.vendorList.isOpen = action.payload;
+        vendorListAction: (state, action: PayloadAction<{ list: FinalResult[] }>) => {
+            state.vendorList = action.payload.list;
             return state;
         },
 
