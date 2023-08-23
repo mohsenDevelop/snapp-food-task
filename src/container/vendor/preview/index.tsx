@@ -9,7 +9,7 @@ const VendorPreview = () => {
     return (
         <Card>
             <CardHeader>
-                <Image
+                {/* <Image
                     src={''}
                     alt={'restaurant-img'}
                     fill={true}
@@ -21,7 +21,7 @@ const VendorPreview = () => {
                         objectPosition: '50% 50%',
                         borderRadius: '6px 6px 0px 0px'
                     }}
-                />
+                /> */}
             </CardHeader>
         </Card>
     );
