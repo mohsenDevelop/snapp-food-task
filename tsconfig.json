@@ -52,8 +52,8 @@
       "@hooks/*": [
         "src/hooks/*"
       ],
-      "@models/*": [
-        "src/models/*"
+      "@typings/*": [
+        "src/typings/*"
       ],
       "@container/*": [
         "src/container/*"
