@@ -21,8 +21,7 @@ import {
     type TypedUseSelectorHook,
 } from 'react-redux';
 
-import { authSlice } from '@slices/authSlice';
-import { cartSlice } from '@slices/cartSlice';
+import { vendorSlice } from '@slices/vendorSlide';
 import { rtkQueryErrorLogger } from '@config/ErrorMiddleware';
 import { api } from '@api/client/api';
 import persistMiddleware from '@config/persistMiddleware';
@@ -35,8 +34,8 @@ const cartPersistConfig = {
 
 const rootReducer = combineReducers({
     [api.reducerPath]: api.reducer,
-    [authSlice.name]: authSlice.reducer,
-    [cartSlice.name]: persistReducer(cartPersistConfig, cartSlice.reducer)
+    [vendorSlice.name]: vendorSlice.reducer,
+    // [cartSlice.name]: persistReducer(cartPersistConfig, cartSlice.reducer)
 });
 
 export const reduxStore = configureStore({
