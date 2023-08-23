@@ -1,0 +1,40 @@
+{
+  "name": "snapp-food-task",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/server": "^11.11.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/node": "20.3.2",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "date-fns-jalali": "^2.30.0-0",
+    "next": "13.4.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.1.1",
+    "redux-persist": "^6.0.0",
+    "styled-components": "^6.0.7",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.45.0",
+    "eslint-config-next": "^13.4.11",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "eslint-webpack-plugin": "^4.0.1"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  }
+}

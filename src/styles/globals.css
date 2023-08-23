@@ -1,0 +1,40 @@
+@import url('../assets/fontiran.css');
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-family: IRANYekanX;
+  direction: rtl;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.main-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.product-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.scrollbar>div {
+  margin-right: 0px;
+  margin-left: 0px;
+}
