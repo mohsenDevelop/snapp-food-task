@@ -4,11 +4,11 @@ import HomeConatiner from '@container/landing';
 const HomePage = async () => {
 
   const data = await getVendorList();
-  console.log({ data });
 
   return (
     <>
-      <HomeConatiner />
+      <HomeConatiner data={data} />
+
     </>
   );
 };

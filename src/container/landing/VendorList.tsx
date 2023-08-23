@@ -1,10 +1,13 @@
 import { VStack } from '@uiKits/stack';
-import { vendorListAction } from '@slices/vendorSlide';
-import { useAppDispatch } from '@hooks/reduxHooks';
+import { useAppSelector } from '@hooks/reduxHooks';
+import { FinalResult } from '@typings/vendorType';
 import VendorPreview from '@container/vendor/preview';
 
 const VendorList = () => {
 
+    const { vendorList } = useAppSelector((state) => state.vendor);
+
+    console.log({ vendorList });
     return (
         <VStack
             style={{
@@ -12,8 +15,18 @@ const VendorList = () => {
                 gap: '24px'
             }}
         >
-            <VendorPreview />
-            <VendorPreview />
+            {
+                vendorList.length ?
+                    vendorList.map((_el: FinalResult) => (
+                        <VendorPreview
+                            key={_el.data.id}
+                            {..._el.data}
+                        />
+                    ))
+                    :
+                    null
+            }
+
         </VStack>
     );
 };

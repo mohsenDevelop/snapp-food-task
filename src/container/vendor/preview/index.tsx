@@ -1,16 +1,18 @@
+import { FC } from 'react';
 import Image from 'next/image';
 
 import {
     Card,
     CardHeader
 } from './style';
+import { FinalResultData } from '@typings/vendorType';
 
-const VendorPreview = () => {
+const VendorPreview: FC<FinalResultData> = (props) => {
     return (
         <Card>
             <CardHeader>
-                {/* <Image
-                    src={''}
+                <Image
+                    src={props?.backgroundImage ?? ''}
                     alt={'restaurant-img'}
                     fill={true}
                     loading={'lazy'}
@@ -21,7 +23,7 @@ const VendorPreview = () => {
                         objectPosition: '50% 50%',
                         borderRadius: '6px 6px 0px 0px'
                     }}
-                /> */}
+                />
             </CardHeader>
         </Card>
     );

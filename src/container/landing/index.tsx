@@ -1,21 +1,23 @@
-import { Container } from '@uiKits/container';
-import { VStack } from '@uiKits/stack';
-import VendorPreview from '@container/vendor/preview';
+'use client';
 
-const HomeConatiner = () => {
+import { useAppDispatch } from '@hooks/reduxHooks';
+import { vendorListAction } from '@slices/vendorSlide';
+import { VendorsResponse } from '@typings/vendorType';
+import { Container } from '@uiKits/container';
+import VendorList from './VendorList';
+
+const HomeConatiner = ({ data }: HomeConatinerProps) => {
+
+    const dispatch = useAppDispatch();
+    dispatch(vendorListAction({ list: data?.data?.finalResult ?? [] }));
+
     return (
         <Container>
-            <VStack
-                style={{
-                    padding: '16px 0px',
-                    gap: '24px'
-                }}
-            >
-                <VendorPreview />
-                <VendorPreview />
-            </VStack>
+            <VendorList />
         </Container>
     );
 };
-
+interface HomeConatinerProps {
+    data?: VendorsResponse
+}
 export default HomeConatiner;
