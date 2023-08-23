@@ -1,16 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // images: {
-    //     domains: [
-    //         'images.unsplash.com',
-    //         'img.freepik.com',
-    //         'im1.dineout.co.in',
-    //         'www.links.hr',
-    //         'media-cdn.bnn.in.th',
-    //         'storage.yandexcloud.net',
-    //         'cdn.pixabay.com'
-    //     ]
-    // },
+    images: {
+        domains: [
+            'cdn.snappfood.ir',
+        ]
+    },
     eslint: {
         dirs: ['src', 'src/*']
     },
