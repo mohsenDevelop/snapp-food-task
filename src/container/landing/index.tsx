@@ -1,9 +1,14 @@
+import { Container } from '@uiKits/container';
+import { VStack } from '@uiKits/stack';
 
 const HomeConatiner = () => {
     return (
-        <>
-            helooo
-        </>
+        <Container>
+            <VStack>
+                Helooo
+            </VStack>
+
+        </Container>
     );
 };
 
