@@ -1,3 +1,5 @@
+'use client';
+
 /* eslint-disable camelcase */
 import { useRef, useState, useEffect } from 'react';
 
@@ -21,8 +23,8 @@ const VendorList = () => {
     const [params, setParams] = useState<VendorsFiltersQuery>(initFilters);
     const [vendorList, setVendorList] = useState<FinalResult[]>([]);
 
-    useInfinitScroll(observerTarget, () => {
-        setParams((prev) => ({ ...prev, page: prev.page + 1 }));
+    useInfinitScroll({ refEl: observerTarget, itemsLength: vendorList.length }, (resLength) => {
+        setParams((prev) => ({ ...prev, page: resLength === 0 ? 1 : prev.page + 1 }));
     });
 
     const { data, isLoading } = useVendorListQuery(params);
@@ -51,6 +53,7 @@ const VendorList = () => {
                     :
                     null
             }
+
             <div ref={observerTarget}>
                 {isLoading ? 'درحال بارگذاری ....' : ''}
             </div>

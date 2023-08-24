@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 
-export const useInfinitScroll = (refEl: any, cb: () => void) => {
+export const useInfinitScroll = ({ refEl, itemsLength }: { refEl: any, itemsLength: number }, cb: (res: number) => void) => {
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 if (entries[0].isIntersecting) {
-                    cb();
+                    cb(itemsLength);
                 }
             },
             { threshold: 1 }
@@ -21,5 +21,5 @@ export const useInfinitScroll = (refEl: any, cb: () => void) => {
                 observer.unobserve(refEl.current);
             }
         };
-    }, [refEl]);
+    }, [refEl, itemsLength]);
 };
