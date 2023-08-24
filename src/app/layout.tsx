@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
 
 import ReduxProvider from '@providers/redux';
+import StyledComponentsProvider from '@providers/styledComponent';
+import ToastProvider from '@providers/toast';
 
 import '@styles/globals.css';
-import StyledComponentsProvider from '@providers/styledComponent';
 
 export const metadata: Metadata = {
   title: 'snapFood',
@@ -21,6 +22,7 @@ export default function RootLayout({
         <StyledComponentsProvider>
           <ReduxProvider>
             {children}
+            <ToastProvider />
           </ReduxProvider>
         </StyledComponentsProvider>
       </body>
