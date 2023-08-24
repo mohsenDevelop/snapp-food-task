@@ -23,18 +23,3 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-
-.main-slider {
-  width: 100%;
-  height: 100%;
-}
-
-.product-slider {
-  width: 100%;
-  height: 100%;
-}
-
-.scrollbar>div {
-  margin-right: 0px;
-  margin-left: 0px;
-}

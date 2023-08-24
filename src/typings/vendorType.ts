@@ -1,3 +1,9 @@
+export interface VendorsFiltersQuery {
+    page: number;
+    page_size: number;
+    lat: number;
+    long: number;
+}
 export interface VendorsResponse {
     data: VendorsData;
     render_type: number;

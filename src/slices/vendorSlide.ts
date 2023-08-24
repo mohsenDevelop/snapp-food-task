@@ -17,8 +17,14 @@ export const vendorSlice = createSlice({
             state.vendorList = action.payload.list;
             return state;
         },
+        addToVendorListAction: (state, action: PayloadAction<{ list: FinalResult[] }>) => {
+
+            const newList = [...state.vendorList, ...action.payload.list];
+            state.vendorList = newList;
+            return state;
+        },
 
     },
 });
 
-export const { vendorListAction } = vendorSlice.actions;
+export const { vendorListAction, addToVendorListAction } = vendorSlice.actions;

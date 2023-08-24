@@ -57,7 +57,7 @@ export const CardBodyRateText = styled.span<{ color: string }>`
    color:  ${(props) => props.color ? props.color : colors.green200};
 `;
 
-export const CardBodyDescription = styled.h3`
+export const CardBodyDescription = styled.p`
    font-size: 12px;
    font-weight: 400;
    padding-bottom: 10px;
@@ -69,12 +69,12 @@ export const CardBodyDescription = styled.h3`
    color: ${colors.gray800};
 `;
 
-export const CardBodyDeliveryTitle = styled.h3`
+export const CardBodyDeliveryTitle = styled.span`
    font-size: 12px;
    font-weight: 400;
    color: ${colors.gray400};
 `;
-export const CardBodyDeliveryPrice = styled.h3`
+export const CardBodyDeliveryPrice = styled.span`
    font-size: 12px;
    font-weight: 400;
 `;
