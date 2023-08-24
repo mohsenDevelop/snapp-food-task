@@ -7,7 +7,6 @@ const VendorList = () => {
 
     const { vendorList } = useAppSelector((state) => state.vendor);
 
-    console.log({ vendorList });
     return (
         <VStack
             style={{
